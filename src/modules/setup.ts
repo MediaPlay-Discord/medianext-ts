@@ -1,6 +1,9 @@
-// import 'reflect-metadata';
+import 'reflect-metadata';
 import * as colorette from 'colorette';
+import * as util from 'util';
 import { config } from 'dotenv-flow';
+
+util.inspect.defaultOptions.depth = 1;
 
 config({
 	silent: true,

@@ -1,7 +1,6 @@
-// The First Ping Command (I guess...)
 import { ApplyOptions } from '@sapphire/decorators';
-import { Command, type CommandOptions } from '@sapphire/framework';
-import { type Message, MessageEmbed, ColorResolvable } from 'discord.js';
+import { Command, type CommandOptions, MessageCommand } from '@sapphire/framework';
+import { MessageEmbed, type ColorResolvable } from 'discord.js';
 import ms from 'ms';
 import { wait } from '../../../modules/times';
 
@@ -13,7 +12,7 @@ import { wait } from '../../../modules/times';
 	fullCategory: ['Utils']
 })
 export class UtilCommands extends Command {
-	public override async messageRun(msg: Message) {
+	public override async messageRun(...[msg]: Parameters<MessageCommand['messageRun']>) {
 		const pingEmbed = new MessageEmbed() //
 			.addFields(
 				{
@@ -28,7 +27,7 @@ export class UtilCommands extends Command {
 			.setColor(msg.author.accentColor as ColorResolvable)
 			.setFooter({
 				text: `Requested By: ${msg.author.tag}`,
-				iconURL: msg.author.displayAvatarURL({ dynamic: true })
+				iconURL: msg.author.displayAvatarURL()
 			});
 		await msg.reply({ content: 'Pinging...' }).then(async (msg2) => {
 			await wait(ms('15m'));
