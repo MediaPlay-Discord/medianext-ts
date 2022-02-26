@@ -1,2 +1,2 @@
-# example-repo
-The Example
+# MediaNext Repository
+Future of MediaNext? Maybe...
