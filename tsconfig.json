@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./build",
+        "declarationMap": false,
+        "declaration": false
+    },
+    "exclude": [
+        "node_modules",
+        "*/**.spec.ts"
+    ],
+    "extends": "@sapphire/ts-config"
+}

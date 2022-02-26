@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build Folders
+.build/
+build/
+dist/
+prod/
+
+# Repl.it Configs
+.config/
+*.nix
+.replit*
+
+# Config Files
+configs.[tj]s
+configs.json
+
+# Environments
+.env.*
+
+# TypeScript Compiler
+*.tsbuildinfo
+**/*.d.ts
