@@ -1,3 +1,6 @@
+import * as util from 'util';
+export const wait = util.promisify(setTimeout);
+
 export function convertMS(ms: number) {
 	const days = Math.floor(ms / 86400000);
 	ms %= 86400000;
