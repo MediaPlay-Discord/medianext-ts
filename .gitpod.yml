@@ -7,13 +7,14 @@ tasks:
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
-    - equinusocio.vsc-material-theme-icons
-    - Equinusocio.vsc-material-theme
+    - monokai.theme-monokai-pro-vscode
     - GitHub.vscode-pull-request-github
-    - Equinusocio.vsc-community-material-theme
+    - ms-python.vscode-pylance
     - mikestead.dotenv
     - ms-vscode.atom-keybindings
     - esbenp.prettier-vscode
+    - redhat.vscode-yaml
+    - GitHub.github-vscode-theme
 
 github:
   prebuilds:
@@ -31,3 +32,7 @@ github:
     addBadge: false
     # add a label once the prebuild is ready to pull requests (defaults to false)
     addLabel: prebuilt-in-gitpod
+
+ports:
+    - port: 3000
+      onOpen: open-preview
