@@ -1,4 +1,4 @@
-import { Listener } from '@sapphire/framework';
+import { Listener, Events } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
 export class MessageListener extends Listener {
@@ -7,8 +7,8 @@ export class MessageListener extends Listener {
 
 		if (msg.channel.type === 'DM') return;
 
-		if (msg.webhookId !== null) return;
+		if (msg.webhookId) return;
 
-		this.container.client.emit('userMessage');
+		this.container.client.emit(Events.PreMessageParsed, msg);
 	}
 }
