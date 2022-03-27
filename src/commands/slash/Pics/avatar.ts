@@ -1,20 +1,15 @@
 import { hyperlink } from '@discordjs/builders';
 import { ApplyOptions } from '@sapphire/decorators';
-import { Command, type CommandOptions, RegisterBehavior, ChatInputCommand } from '@sapphire/framework';
+import { Command, RegisterBehavior, ChatInputCommand } from '@sapphire/framework';
 import { ColorResolvable, MessageEmbed, type GuildMember } from 'discord.js';
 import ms from 'ms';
-import { wait } from '../../../modules/times';
+import { wait } from '../../../libs/modules/times';
 
-@ApplyOptions<CommandOptions>({
-	name: 'avatar',
-	description: 'Show member avatars',
-	fullCategory: ['Pictures'],
-	chatInputCommand: {
-		register: true
-	}
+@ApplyOptions<ChatInputCommand.Options>({
+	description: 'Show member avatars'
 })
 export class PicturesCommands extends Command {
-	public override async chatInputRun(...[interaction]: Parameters<ChatInputCommand['chatInputRun']>) {
+	public override async chatInputRun(interaction: ChatInputCommand.Interaction) {
 		await interaction.deferReply({
 			ephemeral: true
 		});
@@ -37,7 +32,7 @@ export class PicturesCommands extends Command {
 		await interaction.editReply({ embeds: [avatarEmbed] });
 	}
 
-	public override registerApplicationCommands(...[registry]: Parameters<ChatInputCommand['registerApplicationCommands']>) {
+	public override registerApplicationCommands(registry: ChatInputCommand.Registry) {
 		registry.registerChatInputCommand(
 			(builder) =>
 				builder //

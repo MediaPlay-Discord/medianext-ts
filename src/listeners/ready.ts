@@ -1,13 +1,13 @@
 import { ApplyOptions } from '@sapphire/decorators';
-import { Listener, type ListenerOptions } from '@sapphire/framework';
-import type { Client } from 'discord.js';
+import { Listener } from '@sapphire/framework';
 
-@ApplyOptions<ListenerOptions>({
-	event: 'ready',
+@ApplyOptions<Listener.Options>({
 	once: true
 })
 export class ClientListener extends Listener {
-	public override run(client: Client) {
-		this.container.logger.info(`User: ${client.user?.username}\nDiscriminator: ${client.user?.discriminator}\nID: ${client.user?.id}`);
+	public override run() {
+		this.container.logger.info(
+			`User: ${this.container.client.user?.username}\nDiscriminator: ${this.container.client.user?.discriminator}\nID: ${this.container.client.user?.id}`
+		);
 	}
 }

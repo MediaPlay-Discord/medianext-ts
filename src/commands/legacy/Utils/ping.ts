@@ -1,18 +1,17 @@
 import { ApplyOptions } from '@sapphire/decorators';
-import { Command, type CommandOptions, MessageCommand } from '@sapphire/framework';
-import { MessageEmbed, type ColorResolvable } from 'discord.js';
+import { Command, MessageCommand } from '@sapphire/framework';
+import { Message, MessageEmbed, type ColorResolvable } from 'discord.js';
 import ms from 'ms';
-import { wait } from '../../../modules/times';
+import { wait } from '../../../libs/modules/times';
 
-@ApplyOptions<CommandOptions>({
+@ApplyOptions<MessageCommand.Options>({
 	name: 'ping',
 	description: 'Show the WS and API Data',
 	aliases: ['pong'],
-	enabled: true,
-	fullCategory: ['Utils']
+	enabled: true
 })
 export class UtilCommands extends Command {
-	public override async messageRun(...[msg]: Parameters<MessageCommand['messageRun']>) {
+	public override async messageRun(msg: Message) {
 		const pingEmbed = new MessageEmbed() //
 			.addFields(
 				{

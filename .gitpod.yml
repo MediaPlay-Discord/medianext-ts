@@ -7,7 +7,7 @@ tasks:
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
-    - monokai.theme-monokai-pro-vscode
+    - file-icons.file-icons
     - GitHub.vscode-pull-request-github
     - ms-python.vscode-pylance
     - mikestead.dotenv

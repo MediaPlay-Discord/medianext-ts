@@ -1,15 +1,12 @@
-import './modules/setup';
-import { startServer } from './modules/webServer';
-import { NextClient } from './structures/NextClient';
+import './libs/setup';
+import { NextClient } from './libs/clients/NextClient';
 
-export const client = new NextClient();
+const client = new NextClient();
 
-const init = () => {
-	startServer();
-
+const start = async () => {
 	client.logger.info('Logging in...');
-	client.login(`${process.env.D_TOKEN}`).catch((err) => client.logger.error(err));
-	client.logger.info('Logged to the client.');
+	await client.login();
+	client.logger.info('Logged into discord websocket.');
 };
 
-init();
+void start();

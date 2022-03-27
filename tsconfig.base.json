@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+		"module": "CommonJS",
+		"target": "ESNext",
+        "lib": ["ESNext"]
+    },
+    "extends": "@sapphire/ts-config"
+}

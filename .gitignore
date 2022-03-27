@@ -1,12 +1,10 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Build Folders
-.build/
-build/
-dist/
-prod/
+*build/
+*dist/
+*prod/
 
 # Repl.it Configs
 .config/
@@ -14,12 +12,13 @@ prod/
 .replit*
 
 # Config Files
-configs.[tj]s
+configs*.[tj]s
 configs.json
 
 # Environments
+.env
 .env.*
 
-# TypeScript Compiler
+# Other
 *.tsbuildinfo
-**/*.d.ts
+*data/
