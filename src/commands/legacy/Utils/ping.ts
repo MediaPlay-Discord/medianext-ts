@@ -16,11 +16,11 @@ export class UtilCommands extends Command {
 			.addFields(
 				{
 					name: 'WebSocket',
-					value: `${this.container.client.ws.ping.toFixed(1)} ms`
+					value: `${Math.round(this.container.client.ws.ping)} ms`
 				},
 				{
 					name: 'API Response',
-					value: `${(Date.now() - msg.createdTimestamp).toFixed(1)} ms`
+					value: `${Math.round(Date.now() - msg.createdTimestamp)} ms`
 				}
 			)
 			.setColor(msg.author.accentColor as ColorResolvable)
@@ -33,7 +33,7 @@ export class UtilCommands extends Command {
 			if (msg2.editable) {
 				await msg2.edit({ content: 'Received the data from the server!', embeds: [pingEmbed] });
 			} else {
-				this.container.logger.warn("That message can't get edited.");
+				this.container.logger.warn("Can't edit the current message.");
 			}
 		});
 	}
