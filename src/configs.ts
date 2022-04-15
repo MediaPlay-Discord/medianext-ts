@@ -32,5 +32,6 @@ export const clientOptions: ClientOptions = {
 	},
 	makeCache: Options.cacheWithLimits({
 		MessageManager: -1
-	})
+	}),
+	loadMessageCommandListeners: true
 };
