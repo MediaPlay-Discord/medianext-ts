@@ -12,7 +12,6 @@ node_modules/
 .replit*
 
 # Config Files
-configs*.[tj]s
 configs.json
 
 # Environments

@@ -1,9 +1,10 @@
 import fastify from 'fastify';
+
 const app = fastify({
 	logger: false
 });
 
-const startServer = () => {
+export const startServer = () => {
 	app.get('/', async (req, reply) => {
 		console.info(req.body);
 		await reply.type('application/json').code(200).send('Alive');
@@ -17,5 +18,3 @@ const startServer = () => {
 		console.info(`Web Server started in ${address}`);
 	});
 };
-
-export { startServer };

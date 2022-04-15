@@ -2,7 +2,14 @@
 	"extends": "../tsconfig.base.json",
 	"compilerOptions": {
 		"outDir": "../build",
-		"rootDir": "."
+		"rootDir": ".",
+		"baseUrl": ".",
+		"paths": {
+			"#root/*": ["*"],
+			"#lib/*": ["lib/*"],
+			"#utils/*": ["lib/modules/*"],
+			"#env/*": ["lib/env/*"]
+		}
 	},
 	"include": ["."]
 }

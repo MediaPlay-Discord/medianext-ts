@@ -1,14 +1,16 @@
 import { hyperlink } from '@discordjs/builders';
 import { ApplyOptions } from '@sapphire/decorators';
-import { Command, RegisterBehavior, ChatInputCommand } from '@sapphire/framework';
+import type { ChatInputCommand } from '@sapphire/framework';
+import { NextCommand } from '#lib/extensions/NextCommand';
 import { ColorResolvable, MessageEmbed, type GuildMember } from 'discord.js';
 import ms from 'ms';
-import { wait } from '../../../libs/modules/times';
+import { wait } from '#utils/times';
+import { getGuildIds } from '#root/lib/modules/utils';
 
 @ApplyOptions<ChatInputCommand.Options>({
 	description: 'Show member avatars'
 })
-export class PicturesCommands extends Command {
+export class PicturesCommands extends NextCommand {
 	public override async chatInputRun(interaction: ChatInputCommand.Interaction) {
 		await interaction.deferReply({
 			ephemeral: true
@@ -45,7 +47,7 @@ export class PicturesCommands extends Command {
 					),
 			{
 				registerCommandIfMissing: true,
-				behaviorWhenNotIdentical: RegisterBehavior.Overwrite
+				guildIds: getGuildIds()
 			}
 		);
 	}
