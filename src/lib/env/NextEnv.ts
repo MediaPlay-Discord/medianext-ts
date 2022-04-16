@@ -1,10 +1,6 @@
-import type { IntegerString, BooleanString, NumberString } from '@skyra/env-utilities';
+import type { IntegerString, BooleanString, NumberString, ArrayString } from '@skyra/env-utilities';
 
 export interface NextEnv {
-	// Development
-	NODE_ENV: 'test' | 'production' | 'development';
-	DOTENV_DEBUG_ENABLED: BooleanString;
-
 	// Discord API
 	APP_ID: string;
 	APP_SECRET: string;
@@ -19,7 +15,7 @@ export interface NextEnv {
 	VERSION: NumberString;
 	PREFIX: string;
 	REGEX_PREFIX: string;
-	GUILD_ID: string;
+	GUILD_ID: ArrayString;
 
 	// Database
 	MONGODB: string;
