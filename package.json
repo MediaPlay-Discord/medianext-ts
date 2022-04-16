@@ -24,9 +24,9 @@
   "license": "ISC",
   "prettier": "@sapphire/prettier-config",
   "devDependencies": {
-    "@sapphire/eslint-config": "^4.2.2",
-    "@sapphire/prettier-config": "^1.3.0",
-    "@sapphire/ts-config": "^3.3.1",
+    "@sapphire/eslint-config": "^4.3.3",
+    "@sapphire/prettier-config": "^1.4.2",
+    "@sapphire/ts-config": "^3.3.4",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.165",
     "@types/ms": "^0.7.31",
@@ -42,8 +42,8 @@
   },
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
-    "@sapphire/decorators": "^4.3.0",
-    "@sapphire/fetch": "^2.3.0",
+    "@sapphire/decorators": "^4.3.4",
+    "@sapphire/fetch": "^2.3.1",
     "@sapphire/framework": "next",
     "@skyra/env-utilities": "^0.0.5",
     "colorette": "^2.0.16",
