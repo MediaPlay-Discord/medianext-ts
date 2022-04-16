@@ -3,7 +3,7 @@ export const enum WeatherElement {
 	Rain = ':cloud_with_rain:',
 	Snow = ':snowflake:',
 	Flame = ':fire:',
-	Fog = ':flog:',
+	Fog = ':fog:',
 	Rainbow = ':rainbow:',
 	Cloud = ':cloud:'
 }
