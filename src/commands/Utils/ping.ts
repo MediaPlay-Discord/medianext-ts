@@ -2,7 +2,7 @@ import { ApplyOptions } from '@sapphire/decorators';
 import type { MessageCommand } from '@sapphire/framework';
 import { Message, MessageEmbed, type ColorResolvable } from 'discord.js';
 import ms from 'ms';
-import { wait } from '#utils/times';
+import { wait } from '#utils/times/functions';
 import { NextCommand } from '#lib/extensions/NextCommand';
 
 @ApplyOptions<MessageCommand.Options>({

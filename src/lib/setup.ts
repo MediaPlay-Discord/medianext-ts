@@ -1,12 +1,12 @@
 process.env.NODE_ENV ??= 'development';
 
+import '#lib/server';
 import * as colorette from 'colorette';
 import { inspect } from 'node:util';
-import { URL } from 'node:url';
 import { setup } from '@skyra/env-utilities';
 
 inspect.defaultOptions.depth = 1;
 
-setup(new URL('../../.env', import.meta.url));
+setup();
 
 colorette.createColors({ useColor: true });

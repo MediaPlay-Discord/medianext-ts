@@ -1,15 +1,11 @@
-import type { IntegerString, BooleanString, NumberString, ArrayString } from '@skyra/env-utilities';
+import type { IntegerString, NumberString, ArrayString } from '@skyra/env-utilities';
 
-export interface NextEnv {
+export interface NextEnv extends DefaultEnv {
 	// Discord API
 	APP_ID: string;
 	APP_SECRET: string;
 	PUBLIC_KEY: string;
 	DISCORD_TOKEN: string;
-
-	// Web Server
-	ADDRESS: string;
-	PORT: IntegerString;
 
 	// Bot Specific
 	VERSION: NumberString;
@@ -22,4 +18,10 @@ export interface NextEnv {
 	REDIS_PORT: IntegerString;
 	REDIS_HOST: string;
 	REDIS_DB: NumberString;
+}
+
+export interface DefaultEnv {
+	// WebServer
+	ADDRESS: string;
+	PORT: IntegerString;
 }

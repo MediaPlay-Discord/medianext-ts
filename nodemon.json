@@ -1,3 +1,6 @@
 {
-	"exec": "node --enable-source-maps"
+    "$schema": "https://json.schemastore.org/nodemon",
+    "watch": ["src/**/*.ts", "!src/**/*.d.ts"],
+    "ext": "js,ts,mjs",
+    "exec": "npm run dev"
 }

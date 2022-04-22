@@ -7,7 +7,7 @@ tasks:
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
-    - file-icons.file-icons
+    - PKief.material-icon-theme
     - GitHub.vscode-pull-request-github
     - ms-python.vscode-pylance
     - mikestead.dotenv
@@ -15,6 +15,7 @@ vscode:
     - esbenp.prettier-vscode
     - redhat.vscode-yaml
     - GitHub.github-vscode-theme
+    - miguelsolorio.fluent-icons
 
 github:
   prebuilds:

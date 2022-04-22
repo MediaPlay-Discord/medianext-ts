@@ -7,7 +7,7 @@
 		"paths": {
 			"#root/*": ["*"],
 			"#lib/*": ["lib/*"],
-			"#utils/*": ["lib/modules/*"],
+			"#utils/*": ["lib/utils/*"],
 			"#env/*": ["lib/env/*"]
 		}
 	},
