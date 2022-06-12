@@ -42,8 +42,8 @@
   },
   "dependencies": {
     "@discordjs/builders": "^0.14.0",
-    "@sapphire/decorators": "^4.3.4",
-    "@sapphire/fetch": "^2.3.1",
+    "@sapphire/decorators": "^4.3.5",
+    "@sapphire/fetch": "^2.4.0",
     "@sapphire/framework": "next",
     "@skyra/env-utilities": "^0.0.7",
     "colorette": "^2.0.17",
