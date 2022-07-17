@@ -45,7 +45,7 @@
     "@sapphire/decorators": "^4.3.8",
     "@sapphire/fetch": "^2.4.1",
     "@sapphire/framework": "next",
-    "@skyra/env-utilities": "^0.0.7",
+    "@skyra/env-utilities": "^1.0.2",
     "colorette": "^2.0.19",
     "discord-api-types": "^0.36.2",
     "discord.js": "^13.8.1",
